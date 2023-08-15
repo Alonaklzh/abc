@@ -1,0 +1,101 @@
+.hero {
+max-width: 480px;
+margin-left: auto;
+    margin-right: auto;
+    padding-top: 118px;
+    padding-bottom: 118px;
+   color: var(--white-color);
+    background-color: rgba(47, 48, 58, 0.40);
+   display: flex;
+    justify-content: center;
+    align-items: center;
+  box-shadow: 0px 0px 0px 0px rgba(47, 48, 58, 0.40);
+    background-image: url(../images/Imagen.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: 50% 50%;
+ flex-direction: column;
+
+ @media screen and (min-width: 480px){
+    max-width: 1200px;
+ }
+  @media screen and (min-width: 1200px) {
+      max-width: 1600px;
+  }
+    
+ }
+
+
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx){
+
+     .hero {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Imagen@2x.jpg);
+    }
+}
+
+
+
+.hero__title {
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 0.01em;
+    line-height: 1.0;
+    margin-top: 60px;
+
+
+    @media screen and (min-width: 768px) {
+      
+        font-size: 26px;
+        font-weight: 900;
+        letter-spacing: 0.01em;
+        line-height: 1.0;
+
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 200px;
+        font-size: 44px;
+        font-weight: 900;
+        letter-spacing: 0.06em;
+        line-height: 1.0;
+
+    }
+}
+
+.hero__btn {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 32px 10px 32px;
+    width: 261px;
+    height: 50px;
+    gap: 10px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.15);
+    color: var(--white-color);
+    background-color: var(--color-blue);
+    border: none;
+    cursor: pointer;
+    margin-bottom: 128px;
+
+    @media screen and (min-width: 480px) {
+        margin-bottom: 128px;
+
+    }
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 280px;
+    }
+}
+
+.hero {
+
+    &__btn:hover,
+    &__btn:focus {
+        background-color: var(--white-color);
+        color: var(--color-blue);
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
